@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - Mon Réseau Social</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #00bfa5;
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 60px);
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #00bfa5;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #009688;
+    }
+    .link {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .link a {
+      color: #00bfa5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span><strong>Mon Réseau Social</strong></span>
+    
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Connexion</h2>
+      <form action="Autenthification.php" method="post">
+        <label for="loginId">Login</label>
+        <input type="text" name="login" id="loginId" required>
+
+        <label for="passwordId">Mot de passe</label>
+        <input type="password" name="password" id="passwordId" required>
+
+        <input type="submit" value="Se connecter">
+      </form>
+      <div class="link">
+        <p>Pas encore inscrit ? <a href="inscription.html">Créer un compte</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

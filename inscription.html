@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription - Mon Réseau Social</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #00bfa5;
+      color: white;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 48%;
+      margin-top: 20px;
+      background-color: #00bfa5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    input[type="submit"]:hover {
+      background-color: #009688;
+    }
+    input[type="reset"]:hover {
+      background-color: #e53935;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span><strong>Mon Réseau Social</strong></span>
+    <a href="index.html">Retour à la connexion</a>
+  </header>
+
+  <div class="container">
+    <h2>Inscription</h2>
+    <form action="inscreptionRecue.php" method="post" enctype="multipart/form-data">
+      <label for="nom">Nom</label>
+      <input type="text" name="nom" id="nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="fonction">Fonction</label>
+      <select name="function" id="fonction">
+        <option value="PROF">Professeur</option>
+        <option value="ETUD">Étudiant</option>
+        <option value="ADMIN">Administrateur</option>
+      </select>
+
+      <label for="password">Mot de passe</label>
+      <input type="password" name="password" id="password" required>
+
+      <label for="photo">Photo de profil</label>
+      <input type="file" name="photo" id="photo">
+
+      <div style="display: flex; justify-content: space-between;">
+        <input type="submit" value="S'inscrire">
+        <input type="reset" value="Réinitialiser">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
