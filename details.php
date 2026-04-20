@@ -14,7 +14,6 @@ if(isset($_GET['id'])){
     //$stm->fetch();
     $result=$stm->get_Result();
     $row=$result->fetch_assoc();
-            //ghadi tzid dak $row[id];
     echo'
     <table border="1">
         <tr>
